@@ -1,6 +1,6 @@
 /** quiz10-04.c
 * ===========================================================
-*    Name: 
+*    Name:
 * Section:
 * Purpose: Quiz 10
 * ===========================================================
@@ -30,7 +30,7 @@ void print_bits(void* ptr, int num_bytes) {
             // Print a character 1 or 0, given the bit value
             printf("%c", (byte[i] >> j) & 1 ? '1' : '0');
         }
-        
+
         // Separate bytes
         printf(" ");
     }
@@ -40,7 +40,11 @@ void print_bits(void* ptr, int num_bytes) {
 }
 
 // YOUR FUNCTION WILL GO HERE
-
+int setBit (int val, int N, int bitVal) {
+    // Sets Nth bit to bitVal
+    // Returns the new value
+    return (bitVal == 1) ? (val | (1 << N)) : (val & ~(1 << N));
+}
 
 int main(void){
 

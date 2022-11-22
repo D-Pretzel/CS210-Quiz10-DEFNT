@@ -1,6 +1,6 @@
 /** quiz10-02.c
 * ===========================================================
-*    Name: 
+*    Name:
 * Section:
 * Purpose: Quiz 10
 * ===========================================================
@@ -30,7 +30,7 @@ void print_bits(void* ptr, int num_bytes) {
             // Print a character 1 or 0, given the bit value
             printf("%c", (byte[i] >> j) & 1 ? '1' : '0');
         }
-        
+
         // Separate bytes
         printf(" ");
     }
@@ -40,7 +40,11 @@ void print_bits(void* ptr, int num_bytes) {
 }
 
 // YOUR FUNCTION WILL GO HERE
-
+int isPositive(int x){
+    // Checks if positive
+    //REturns 1 if positive or zero and 0 if negative
+    return (x >> 31) & 1 ? 0 : 1;
+}
 
 int main(void){
 
